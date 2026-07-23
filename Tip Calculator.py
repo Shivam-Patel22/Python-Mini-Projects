@@ -3,6 +3,7 @@ def Tip():
     tip_per=float(input("Enter Tip Percentage="))
     print("Bill Without Tip=",bill)
     tip=bill*(tip_per/100)
+    print("Tip=",tip)
     bill=bill+tip
     print("Bill With Tip=",bill)
 Tip()
