@@ -3,7 +3,7 @@ class TODO():
     def __init__(self):
         self.list=[]
     def add(self):
-        self.list.append(input("Enter Task"))
+        self.list.append(input("Enter Task="))
     def view(self):
         print("="*40)
         if not self.list:
@@ -13,7 +13,7 @@ class TODO():
                 print(f"{i}:{task}")
         print("="*40)
     def remove(self):
-        rem=int(input("Enter Number to remove Task:"))
+        rem=int(input("Enter Number to remove Task="))
         if 1<=rem<=len(self.list):
             removed=self.list.pop(rem-1)
             print(f"Removed:{removed}")
