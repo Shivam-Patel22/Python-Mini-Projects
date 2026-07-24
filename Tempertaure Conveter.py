@@ -1,74 +1,78 @@
 class Converter():
-    def Kel_cel(self):
-        #1.Celsuis to Kelvin
-        self.celsius=float(input("Enter Celsius="))
-        self.kelvin=self.celsius+273.15
+    def cel_to_kel(self):
+        # Celsius to Kelvin
+        self.celsius = float(input("Enter Celsius = "))
+        self.kelvin = self.celsius + 273.15
         print("="*40)
-        print("Kelvin=",self.kelvin)
+        print("Kelvin =", self.kelvin)
         print("="*40)
-    def Cel_Kel(self):
-        #Kelvin to Celsuis
-        self.kelvin=float(input("Enter Kelvin="))
-        self.celsius=self.kelvin-273.15
+
+    def kel_to_cel(self):
+        # Kelvin to Celsius
+        self.kelvin = float(input("Enter Kelvin = "))
+        self.celsius = self.kelvin - 273.15
         print("="*40)
-        print("Celsius=",self.celsius)
+        print("Celsius =", self.celsius)
         print("="*40)
-    def Kel_far(self):
-        #Fareheit to Kelvin
-        self.fareheit=float(input("Enter Farenheit="))
-        self.kelvin=(self.fareheit+459.67)*5/9
+
+    def far_to_kel(self):
+        # Fahrenheit to Kelvin
+        self.fahrenheit = float(input("Enter Fahrenheit = "))
+        self.kelvin = (self.fahrenheit + 459.67) * 5/9
         print("="*40)
-        print("Kelvin=",self.kelvin)
+        print("Kelvin =", self.kelvin)
         print("="*40)
-    def Far_kel(self):
-        #Kelvin to Fareheit
-        self.kelvin=float(input("Enter Kelvin="))
-        self.fareheit = (self.kelvin - 273.15) * 9/5 + 32
+
+    def kel_to_far(self):
+        # Kelvin to Fahrenheit
+        self.kelvin = float(input("Enter Kelvin = "))
+        self.fahrenheit = (self.kelvin - 273.15) * 9/5 + 32
         print("="*40)
-        print("Fareheit=",self.fareheit)
+        print("Fahrenheit =", self.fahrenheit)
         print("="*40)
-    def Cal_far(self):
-        #Celsuis to Fareheit
-        self.celsuis=float(input("Enter Celsius="))
-        self.fareheit=(self.celsuis*9/5)+32
+
+    def cel_to_far(self):
+        # Celsius to Fahrenheit
+        self.celsius = float(input("Enter Celsius = "))
+        self.fahrenheit = (self.celsius * 9/5) + 32
         print("="*40)
-        print("Fareheit=",self.fareheit)
+        print("Fahrenheit =", self.fahrenheit)
         print("="*40)
-    def Far_cal(self):
-        #Fareheit to Celsuis
-        self.fareheit=float(input("Enter Farenheit="))
-        self.celsuis=(self.fareheit-32)/(9/5)
+
+    def far_to_cel(self):
+        # Fahrenheit to Celsius
+        self.fahrenheit = float(input("Enter Fahrenheit = "))
+        self.celsius = (self.fahrenheit - 32) * 5/9
         print("="*40)
-        print("Celsuis=",self.celsuis)
-x=1
-c=Converter()
-while x!=7:
-    print("1.Celsuis to Kelvin")
-    print("2.Kelvin to Celsuis")
-    print("3.Fareheit to Kelvin")
-    print("4.Kelvin to Fareheit")
-    print("5.Celsuis to Fareheit")
-    print("6.Fareheit to Celsuis")
-    print("7.EXIT")
-    x=int(input("Enter Your Choice From 1 to 6:"))
+        print("Celsius =", self.celsius)
+        print("="*40)
+
+
+x = 1
+c = Converter()
+while x != 7:
+    print("1. Celsius to Kelvin")
+    print("2. Kelvin to Celsius")
+    print("3. Fahrenheit to Kelvin")
+    print("4. Kelvin to Fahrenheit")
+    print("5. Celsius to Fahrenheit")
+    print("6. Fahrenheit to Celsius")
+    print("7. EXIT")
+    x = int(input("Enter Your Choice From 1 to 7: "))
     match x:
         case 1:
-            c.Kel_cel()
+            c.cel_to_kel()
         case 2:
-            c.Cel_Kel()
+            c.kel_to_cel()
         case 3:
-            c.Kel_far()
+            c.far_to_kel()
         case 4:
-            c.Far_kel()
+            c.kel_to_far()
         case 5:
-            c.Cal_far()
+            c.cel_to_far()
         case 6:
-            c.Far_cal()
+            c.far_to_cel()
         case 7:
-            x=7
+            print("Exiting...")
         case _:
-            print("Invalid Choice,Try Again")
-
-
-
-
+            print("Invalid Choice, Try Again")
