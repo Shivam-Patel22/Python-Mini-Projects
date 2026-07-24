@@ -21,13 +21,13 @@ class Converter():
         print("Fareheit=",self.fareheit)
     def Far_cal(self):
         #Fareheit to Celsuis
-        self.celsius=float(input("Enter Celsius="))
+        self.celsuis=float(input("Enter Celsius="))
         self.fareheit=(self.celsuis*9/5)+32
         print("Fareheit=",self.fareheit)
     def Cal_far(self):
         #Celsuis to Fareheit
         self.fareheit=float(input("Enter Farenheit="))
-        self.celsuis=(self.farenheit-32)/(9/5)
+        self.celsuis=(self.fareheit-32)/(9/5)
         print("Celsuis=",self.celsuis)
 x=1
 c=Converter()
@@ -57,7 +57,7 @@ while x!=7:
             x=7
         case _:
             print("Invalid Choice,Try Again")
-            
+
 
 
 
