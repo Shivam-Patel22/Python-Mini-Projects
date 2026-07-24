@@ -23,24 +23,23 @@ class Converter():
     def Far_kel(self):
         #Kelvin to Fareheit
         self.kelvin=float(input("Enter Kelvin="))
-        self.fareheit=(self.kelvin*5/9)-459.67
-        print("="*40)
-        print("Fareheit=",self.fareheit)
-        print("="*40)
-    def Far_cal(self):
-        #Fareheit to Celsuis
-        self.celsuis=float(input("Enter Celsius="))
-        self.fareheit=(self.celsuis*9/5)+32
+        self.fareheit = (self.kelvin - 273.15) * 9/5 + 32
         print("="*40)
         print("Fareheit=",self.fareheit)
         print("="*40)
     def Cal_far(self):
         #Celsuis to Fareheit
+        self.celsuis=float(input("Enter Celsius="))
+        self.fareheit=(self.celsuis*9/5)+32
+        print("="*40)
+        print("Fareheit=",self.fareheit)
+        print("="*40)
+    def Far_cal(self):
+        #Fareheit to Celsuis
         self.fareheit=float(input("Enter Farenheit="))
         self.celsuis=(self.fareheit-32)/(9/5)
         print("="*40)
         print("Celsuis=",self.celsuis)
-        print("="*40)
 x=1
 c=Converter()
 while x!=7:
@@ -62,9 +61,9 @@ while x!=7:
         case 4:
             c.Far_kel()
         case 5:
-            c.Far_cal()
-        case 6:
             c.Cal_far()
+        case 6:
+            c.Far_cal()
         case 7:
             x=7
         case _:
