@@ -1,12 +1,16 @@
-list=[]
+
 class TODO():
+    def __init__(self):
+        self.list=[]
     def add(self):
-        add=input("Enter Today's Task:")
-        list.append(add)
+        self.list.append(input("Enter Task"))
     def view(self):
         print("="*40)
-        print("Today's Task:")
-        print(list)
+        if not self.list:
+            print("No Task")
+        else:
+            for i,task in enumerate(self.list,start=1):
+                print(f"{i}:{task}")
         print("="*40)
     def remove(self):
         rem=input("Enter Number of Finished Task:")
