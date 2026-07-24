@@ -13,8 +13,13 @@ class TODO():
                 print(f"{i}:{task}")
         print("="*40)
     def remove(self):
-        rem=input("Enter Number of Finished Task:")
-        list.remove(rem)
+        rem=int(input("Enter Number to remove Task:"))
+        if 1<=rem<=len(self.list):
+            removed=self.list.pop(rem-1)
+            print(f"Removed:{removed}")
+        else:
+            print("Invalid Task Number")
+
 t=TODO()
 x=1
 while x!=4:
